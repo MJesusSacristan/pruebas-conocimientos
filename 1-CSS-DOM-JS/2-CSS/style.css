@@ -1,0 +1,114 @@
+/******* GENERAL *******/
+
+* {
+  margin: 0;
+  /*padding: 0;*/ /***********DA PROBLEMAS!!!!!!!*****************/
+  box-sizing: border-box;
+}
+
+/* Toda la tipografía de la página es sans-serif */
+html {
+  font-family: sans-serif;
+}
+
+/******* CABECERA *******/
+
+/* La cabecera tiene color de fondo, y texto blanco y centrado  */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(100, 149, 237);
+  height: 5rem;
+}
+
+/******* MAIN *******/
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /*height: 80vh;*/
+}
+
+h2 {
+  color: rgb(100, 149, 237);
+  padding: 1rem 0;
+}
+
+/******* LISTA *******/
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: circle; /* Las viñetas de la lista no son las que vienen por defecto*/
+  gap: 1rem;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Los objetos importantes de la lista están subrayados y en negrita */
+.importante {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/******* TABLA *******/
+
+table {
+  border: 1px solid white;
+  vertical-align: middle;
+}
+
+tr {
+  height: 2rem;
+}
+
+td {
+  width: 8rem;
+  padding: 1rem 1rem;
+}
+
+th {
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+/* La cabecera tiene un color de fondo y de texto diferente al resto*/
+thead {
+  color: white;
+  background-color: rgb(100, 149, 237);
+}
+
+/* Los títulos de fila tienen un color de fondo con transparencia */
+tbody th {
+  background-color: rgb(100, 149, 237, 0.5);
+  width: 5rem;
+}
+
+/* Las filas pares tienen un color de fondo distinto a las impares */
+/* Filas impares */
+tbody tr:nth-child(odd) {
+  background-color: rgb(232, 239, 252);
+}
+/* Filas pares */
+tbody tr:nth-child(even) {
+  background-color: rgb(187, 208, 247);
+}
+
+/* El descanso está en mayúsculas, negrita y centrado */
+#descanso {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+/******* CÓDIGO ADAPTABLE A LA PANTALLA *******/
+@media (min-height: 700px) {
+  main {
+    display: row;
+  }
+} ;
