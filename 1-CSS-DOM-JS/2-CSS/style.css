@@ -2,7 +2,7 @@
 
 * {
   margin: 0;
-  /*padding: 0;*/ /***********DA PROBLEMAS!!!!!!!*****************/
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -15,27 +15,26 @@ html {
 
 /* La cabecera tiene color de fondo, y texto blanco y centrado  */
 header {
+  background-color: rgb(100, 149, 237);
+  color: white;
+  align-items: center;
+  height: 5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: rgb(100, 149, 237);
-  height: 5rem;
 }
 
 /******* MAIN *******/
 
 main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  /*height: 80vh;*/
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 h2 {
   color: rgb(100, 149, 237);
-  padding: 1rem 0;
+  padding: 2rem 0 1rem;
 }
 
 /******* LISTA *******/
@@ -45,6 +44,7 @@ ul {
   flex-direction: column;
   list-style: circle; /* Las viñetas de la lista no son las que vienen por defecto*/
   gap: 1rem;
+  margin: 0 2rem;
   justify-content: center;
   height: 100%;
 }
@@ -60,33 +60,23 @@ ul {
 table {
   border: 1px solid white;
   vertical-align: middle;
+  margin: 0 1rem;
+}
+
+/* La cabecera tiene un color de fondo y de texto diferente al resto */
+thead {
+  color: white;
+  background-color: rgb(100, 149, 237);
 }
 
 tr {
   height: 2rem;
 }
 
-td {
-  width: 8rem;
-  padding: 1rem 1rem;
-}
-
 th {
   font-weight: bold;
   text-align: center;
   padding: 1rem 1rem;
-}
-
-/* La cabecera tiene un color de fondo y de texto diferente al resto*/
-thead {
-  color: white;
-  background-color: rgb(100, 149, 237);
-}
-
-/* Los títulos de fila tienen un color de fondo con transparencia */
-tbody th {
-  background-color: rgb(100, 149, 237, 0.5);
-  width: 5rem;
 }
 
 /* Las filas pares tienen un color de fondo distinto a las impares */
@@ -99,16 +89,20 @@ tbody tr:nth-child(even) {
   background-color: rgb(187, 208, 247);
 }
 
+/* Los títulos de fila tienen un color de fondo con transparencia */
+tbody th {
+  background-color: rgb(100, 149, 237, 0.5);
+  width: 5rem;
+}
+
+td {
+  width: 8rem;
+  padding: 1rem 1rem;
+}
+
 /* El descanso está en mayúsculas, negrita y centrado */
 #descanso {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
 }
-
-/******* CÓDIGO ADAPTABLE A LA PANTALLA *******/
-@media (min-height: 700px) {
-  main {
-    display: row;
-  }
-} ;
